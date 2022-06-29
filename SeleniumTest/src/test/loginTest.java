@@ -6,7 +6,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.*;
 
-public class loginWithTestNGDemo {
+public class loginTest {
 	WebDriver driver = null;
 	String pageTitle;
 	String expectedTitle = "Daraz.com.bd: Online Shopping Bangladesh - Mobiles, Tablets, Home Appliances, TV, Audio &amp; More";
@@ -28,13 +28,8 @@ public class loginWithTestNGDemo {
 	    Assert.assertEquals(pageTitle,expectedTitle);
 	    	    
 	}
-	@Test
 	@AfterTest
 	public void tearDownTest() {
-		driver.quit();
-		
-		
-		
-	}
+		driver.quit();}
 
 }

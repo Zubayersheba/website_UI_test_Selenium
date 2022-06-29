@@ -10,8 +10,7 @@ public class addToCartTest {
 	WebDriver driver = null;
 	String pageTitle;
 	String expectedTitle = "Daraz.com.bd: Online Shopping Bangladesh - Mobiles, Tablets, Home Appliances, TV, Audio &amp; More";
-	@BeforeTest
-	public void setUp() {
+	public void login() {
 		System.setProperty("webdriver.chrome.driver", "chromedriver_linux64/chromedriver");
 		driver = new ChromeDriver();
 		driver.get("https://member.daraz.com.bd/user/login?spm=a2a0e.home.header.d5.735212f7tfMK0w&redirect=https%3A%2F%2Fwww.daraz.com.bd%2F");
@@ -20,6 +19,13 @@ public class addToCartTest {
 	    driver.findElement(By.xpath("//div[@id='container']/div/div[2]/form/div/div/div[2]/input")).sendKeys("zubayersheba18");
 	    
 	    driver.findElement(By.xpath("//button[@type='submit']")).click();
+		
+	}
+	@BeforeTest
+	public void setUp() {
+		//login before executing add to cart test case
+		login();
+		
 	}
 	
 	
