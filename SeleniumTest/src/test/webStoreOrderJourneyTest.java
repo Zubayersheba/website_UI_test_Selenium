@@ -9,7 +9,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.*;
-
+//**Test case : Add to cart a product and place an order with login
+//**Expected result : user will be unable choose a product and able to add to cart the product, then user will be logged in and place an order"
 public class webStoreOrderJourneyTest {
 	WebDriver driver = null;
 	private JavascriptExecutor js;
